@@ -17,7 +17,7 @@ const useMusicPlayer = () => {
             togglePlay();
         }else {
             state.audioPlayer.pause();
-            StyleSheet.audioPlayer = new Audio(state.tracks[index].file);
+            state.audioPlayer = new Audio(state.tracks[index].file);
             state.audioPlayer.play();
             setState({...state, currentTrackIndex: index, isPlaying:true})
         }
@@ -25,7 +25,7 @@ const useMusicPlayer = () => {
 
     const playPreviousTrack = () => {
         let newIndex = null;
-        state.currentTrackIndex === 0 ? (newIndex = state.tracks.length-1):(newIndex = state.currentTrackIndex -1);
+        state.currentTrackIndex === 0 ? (newIndex = state.tracks.length -1):(newIndex = state.currentTrackIndex -1);
         playTrack(newIndex);
     }
 
@@ -39,7 +39,8 @@ const useMusicPlayer = () => {
         playTrack,
         currentTrackIndex: state.currentTrackIndex,
         currentTrackName: state.currentTrackIndex !==null && state.tracks[state.currentTrackIndex].name,
-
+        TrackList: state.tracks,
+        isPlaying: state.isPlaying,
         playPreviousTrack,
         playNextTrack,
 };

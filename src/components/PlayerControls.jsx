@@ -16,12 +16,12 @@ const PlayerControls = () => {
         onClick={music.playPreviousTrack} />
         </button>
 
-        <button>
-        onClick={music.togglePlay}
+        <button onClick={music.togglePlay}>
+        
        {music.isPlaying ? (
-        <FontAwesomeIcon icon={faPause}/>)
+        <FontAwesomeIcon icon={faPause} />)
         :(
-        <FontAwesomeIcon icon={faPlay}/>)}
+        <FontAwesomeIcon icon={faPlay} />)}
         </button>
         <button>
             <FontAwesomeIcon icon={faStepForward}
