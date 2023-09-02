@@ -2,8 +2,9 @@
   text-align: center;
   background: url(../public/images.jpeg)no-repeat center center/cover;
   height: 100vh;
-  color: beige;
+  color: rgb(239, 252, 0);
   font-size: xx-large;
+  font-weight:bolder;
 }
 
 

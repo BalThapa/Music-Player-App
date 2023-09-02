@@ -8,9 +8,10 @@ const useMusicPlayer = () => {
         if(state.isPlaying) {
             state.audioPlayer.pause();
             setState({...state, isPlaying:false})
-        }else
+        }else{
         state.audioPlayer.play();
         setState({...state, isPlaying:true})
+    }
     }
 
     const playTrack = (index) => {
