@@ -6,7 +6,7 @@ import { useMusicPlayer } from '../hooks/useMusicPlayer';
 const PlayerControls = () => {
     const music = useMusicPlayer();
     return (
-        <>
+        <div>
         <div>
             <p>{music.currentTrackName}</p>
         </div>
@@ -16,8 +16,7 @@ const PlayerControls = () => {
         onClick={music.playPreviousTrack} />
         </button>
 
-        <button onClick={music.togglePlay}>
-        
+        <button onClick={music.togglePlay}>    
        {music.isPlaying ? (
         <FontAwesomeIcon icon={faPause} />)
         :(
@@ -28,8 +27,8 @@ const PlayerControls = () => {
             onClick={music.playNextTrack} />
         </button>
         
-        </>
+        </div>
     );
 };
 
-export {PlayerControls};
+export { PlayerControls };
