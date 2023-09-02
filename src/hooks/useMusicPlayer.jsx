@@ -6,10 +6,11 @@ const useMusicPlayer = () => {
 
     const togglePlay = () => {
         if(state.isPlaying) {
+            state.audioPlayer.pause()
             setState({...setState, isPlaying:false})
         }else
-        setState({...setState, isPlaying:true})
         state.audioPlayer.play();
+        setState({...setState, isPlaying:true})
     }
 
     const playTrack = (index) => {
